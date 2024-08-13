@@ -88,11 +88,11 @@
     window.addEventListener("scroll", function () {
         let imageDiv = document.querySelector('.full-page-image');
         const videoElement = document.getElementById('bg-video');
-        if (window.scrollY > 95) {
+        if (window.scrollY > 40000) {
             videoElement.style.opacity = 0;
         }
         // Check if page is scrolled
-        if (window.scrollY > 95) { // You can adjust this value based on your requirement
+        if (window.scrollY > 1) { // You can adjust this value based on your requirement
             imageDiv.classList.add('banner-state');
             imageDiv.classList.add('ncont');
             imageDiv.style.backgroundImage = `url(assets/banner.png)`;
@@ -226,6 +226,24 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div class="container is-max-desktop">
+        <div class="content is-centered has-text-centered">
+            <!-- Paint the vision / Overview-->
+            <div class="column has-text-justified">
+
+                <h3>The fingering discovered by the agent itself vs human pianist annotations</h3>
+
+                <div class="column overlay-image has-text-centered">
+                    <p> We now compare the fingering discovered by the agent itself and the human annotations. We visualize the sample trajectory of playing <i>French Suite No.5 Sarabande</i> and the corresponding fingering. We found that the agent discovers different fingering compared to humans. For example, for the right hand, humans mainly use the middle and ring fingers, while our agent uses the thumb and first finger. Furthermore, in some cases, human annotations are not suitable for the robot hand due to different morphologies. For example, in the second time step of the figure, the human uses the first finger and ring finger. However, due to the mechanical limitation of the robot hand, it can not press keys that far apart with these two fingers, thus mimicking human fingering will miss one key. Instead, our agent discovered to use the thumb and little finger, which satisfies the hardware limitation and accurately presses the target keys.</p>
+                </div>
+
+                <div class="column overlay-image has-text-centered">
+                    <img src="assets/fig3.png">
+                </div>
             </div>
         </div>
     </div>
